@@ -43,6 +43,8 @@ svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stro
 .back{display:inline-flex;align-items:center;gap:2px;color:var(--acc-ink);font-size:13px;font-weight:600;margin:20px 0 0 -4px;padding:6px 6px 6px 0}
 .back svg.i{width:18px;height:18px}
 .back + .ph{padding-top:8px}
+.ph h1.logo{margin:-6px -10px 0}
+.ph h1.logo img{display:block;width:100%;height:auto}
 
 /* cards */
 .card{background:var(--card);border-radius:26px;padding:20px;margin-bottom:16px;border:1px solid rgba(246,232,233,.95);box-shadow:0 10px 30px rgba(190,140,130,.07)}
@@ -491,7 +493,7 @@ function wishStat(){const t=S.wishes.length,d=S.wishes.filter(w=>w.done).length;
 function monthMoods(Y,M){const out=[];const dim=new Date(Y,M+1,0).getDate();for(let d=1;d<=dim;d++){out.push(S.moods[`${Y}-${pad(M+1)}-${pad(d)}`]||0)}return out}
 
 /* ===== views ===== */
-function head(t,s){const nm=(ROOT.list.length>1&&t!=='ママノート')?`<span class="pn">${esc(curP().name)}</span>`:'';return `<header class="ph"><h1>${t}</h1>${(s||nm)?`<p>${s||''}${nm}</p>`:''}</header>`}
+function head(t,s){const nm=(ROOT.list.length>1&&t!=='ママノート')?`<span class="pn">${esc(curP().name)}</span>`:'';return `<header class="ph"><h1${t==='ママノート'?' class="logo"':''}>${t==='ママノート'?'<img src="img/title.webp" alt="ママノート：妊娠中の記録と準備を、ひとつに。" width="1040" height="390">':t}</h1>${(s||nm)?`<p>${s||''}${nm}</p>`:''}</header>`}
 const pregChip=()=>`<button class="preg-chip" data-act="pregSheet" aria-label="妊娠の切り替え">${esc(curP().name)}${ROOT.list.length>1?`<small>全${ROOT.list.length}件</small>`:''}${ic('chev')}</button>`;
 function subHead(t,s){return `<button class="back" data-act="go" data-v="more">${ic('back')}もっと</button>${head(t,s)}`}
 
