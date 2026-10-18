@@ -45,6 +45,8 @@ svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stro
 .back + .ph{padding-top:8px}
 .ph h1.logo{margin:-6px -10px 0}
 .ph h1.logo img{display:block;width:100%;height:auto}
+.a2hs{margin:-10px 0 14px;padding:8px 12px;border-radius:14px;background:var(--blue-l);color:var(--acc-ink);font-size:12px;font-weight:600;text-align:center;line-height:1.5}
+.a2hs small{display:block;font-weight:400;color:var(--sub);font-size:11px}
 
 /* cards */
 .card{background:var(--card);border-radius:26px;padding:20px;margin-bottom:16px;border:1px solid rgba(246,232,233,.95);box-shadow:0 10px 30px rgba(190,140,130,.07)}
@@ -497,6 +499,12 @@ function head(t,s){const nm=(ROOT.list.length>1&&t!=='ママノート')?`<span c
 const pregChip=()=>`<button class="preg-chip" data-act="pregSheet" aria-label="妊娠の切り替え">${esc(curP().name)}${ROOT.list.length>1?`<small>全${ROOT.list.length}件</small>`:''}${ic('chev')}</button>`;
 function subHead(t,s){return `<button class="back" data-act="go" data-v="more">${ic('back')}もっと</button>${head(t,s)}`}
 
+function a2hs(){
+  const standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+  if (standalone) return '';
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
+  return `<p class="a2hs">📲 ホーム画面に追加してお使いください<small>${ios ? '下の共有ボタン（□に↑）→「ホーム画面に追加」' : 'ブラウザのメニュー →「ホーム画面に追加」'}</small></p>`;
+}
 function vHome(){
   const t=todayS();let hero;
   if(!S.due){
@@ -517,7 +525,7 @@ function vHome(){
   const now=new Date();const mv=monthMoods(now.getFullYear(),now.getMonth()).filter(Boolean);
   const avg=mv.length?mv.reduce((a,b)=>a+b,0)/mv.length:0;
   const last=[...S.checkups].sort((a,b)=>b.date.localeCompare(a.date))[0];
-  return head('ママノート',jd(t))+pregChip()+hero+`
+  return head('ママノート',jd(t))+a2hs()+pregChip()+hero+`
   <div class="grid2">
    <button class="tile-s" data-act="go" data-v="prep"><span class="t">出産準備</span><span class="v">${ps.p}<small>%</small></span>${pb(ps.p)}<span class="n">${ps.d} / ${ps.t} 完了</span></button>
    <button class="tile-s" data-act="go" data-v="wish"><span class="t">やりたいこと</span><span class="v">${ws.p}<small>%</small></span>${pb(ws.p,'br')}<span class="n">${ws.d} / ${ws.t} 達成</span></button>
