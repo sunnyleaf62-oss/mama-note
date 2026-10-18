@@ -9,6 +9,15 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="ママノート">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="description" content="妊娠中の記録と出産準備を、ひとつに。健診の記録、エコーアルバム、出産準備リスト、出産後の手続きまで。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ママノート">
+<meta property="og:description" content="妊娠中の記録と準備を、ひとつに。">
+<meta property="og:url" content="https://sunnyleaf62-oss.github.io/shussan-note/">
+<meta property="og:image" content="https://sunnyleaf62-oss.github.io/shussan-note/img/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -82,6 +91,10 @@ svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stro
 .lrow .ic.c{background:#EEE9F8;color:#6F5BA3}
 .lrow .ic.d{background:#FAF3D3;color:#85711F}
 .lrow .ic.b{background:var(--brown-l);color:var(--brown-d)}
+.sis-h{font-size:12px;letter-spacing:.06em;color:var(--sub);font-weight:600;margin:28px 4px 10px}
+.sis{display:block;border-radius:20px;overflow:hidden;margin-bottom:12px;box-shadow:0 8px 24px rgba(232,176,196,.15)}
+.sis img{display:block;width:100%;height:auto}
+.sis:active{transform:translateY(1px)}
 .lrow .tt{flex:1;min-width:0}
 .lrow .tt b{display:block;font-family:var(--serif);font-size:16px;font-weight:600}
 .lrow .tt span{font-size:12.5px;color:var(--sub)}
@@ -771,7 +784,10 @@ function vMore(){
   `<button class="lrow" data-act="go" data-v="echo"><span class="ic c">${ic('img')}</span><span class="tt"><b>エコーアルバム</b><span>${S.echoes.length}枚の写真</span></span>${ic('chev')}</button>
    <button class="lrow" data-act="go" data-v="proc"><span class="ic">${ic('check')}</span><span class="tt"><b>出産後の手続き</b><span>${procStat().d} / ${procStat().t} 完了</span></span>${ic('chev')}</button>
    <button class="lrow" data-act="go" data-v="wish"><span class="ic">${ic('star')}</span><span class="tt"><b>やりたいことリスト</b><span>${wishStat().d} / ${wishStat().t} 達成</span></span>${ic('chev')}</button>
-   <button class="lrow" data-act="go" data-v="data"><span class="ic b">${ic('save')}</span><span class="tt"><b>設定とバックアップ</b><span>予定日・書き出し・読み込み</span></span>${ic('chev')}</button>`;
+   <button class="lrow" data-act="go" data-v="data"><span class="ic b">${ic('save')}</span><span class="tt"><b>設定とバックアップ</b><span>予定日・書き出し・読み込み</span></span>${ic('chev')}</button>
+   <div class="sis-h">姉妹サイト</div>
+   <a class="sis" href="https://sunnyleaf62-oss.github.io/omutsu-tanka/" target="_blank" rel="noopener"><img src="img/omutsu-banner.webp" alt="おむつ単価くらべ：送料込みの1枚あたりで毎日比較" width="1200" height="450" loading="lazy"></a>
+   <a class="sis" href="https://sunnyleaf62-oss.github.io/milk-tanka/" target="_blank" rel="noopener"><img src="img/milk-banner.webp" alt="ミルク単価くらべ：送料込みの100mlあたりで毎日比較" width="1200" height="450" loading="lazy"></a>`;
 }
 function vData(){
   const kb=Math.round(new Blob([JSON.stringify(ROOT)]).size/1024);
