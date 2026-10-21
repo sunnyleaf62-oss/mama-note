@@ -9,15 +9,6 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="ママノート">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="description" content="妊娠中の記録と出産準備を、ひとつに。健診の記録、エコーアルバム、出産準備リスト、出産後の手続きまで。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ママノート">
-<meta property="og:description" content="妊娠中の記録と準備を、ひとつに。">
-<meta property="og:url" content="https://sunnyleaf62-oss.github.io/mama-note/">
-<meta property="og:image" content="https://sunnyleaf62-oss.github.io/mama-note/img/ogp.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -43,10 +34,6 @@ svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stro
 .back{display:inline-flex;align-items:center;gap:2px;color:var(--acc-ink);font-size:13px;font-weight:600;margin:20px 0 0 -4px;padding:6px 6px 6px 0}
 .back svg.i{width:18px;height:18px}
 .back + .ph{padding-top:8px}
-.ph h1.logo{margin:-6px -10px 0}
-.ph h1.logo img{display:block;width:100%;height:auto}
-.a2hs{margin:-10px 0 14px;padding:8px 12px;border-radius:14px;background:var(--blue-l);color:var(--acc-ink);font-size:12px;font-weight:600;text-align:center;line-height:1.5}
-.a2hs small{display:block;font-weight:400;color:var(--sub);font-size:11px}
 
 /* cards */
 .card{background:var(--card);border-radius:26px;padding:20px;margin-bottom:16px;border:1px solid rgba(246,232,233,.95);box-shadow:0 10px 30px rgba(190,140,130,.07)}
@@ -95,10 +82,6 @@ svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stro
 .lrow .ic.c{background:#EEE9F8;color:#6F5BA3}
 .lrow .ic.d{background:#FAF3D3;color:#85711F}
 .lrow .ic.b{background:var(--brown-l);color:var(--brown-d)}
-.sis-h{font-size:12px;letter-spacing:.06em;color:var(--sub);font-weight:600;margin:28px 4px 10px}
-.sis{display:block;border-radius:20px;overflow:hidden;margin-bottom:12px;box-shadow:0 8px 24px rgba(232,176,196,.15)}
-.sis img{display:block;width:100%;height:auto}
-.sis:active{transform:translateY(1px)}
 .lrow .tt{flex:1;min-width:0}
 .lrow .tt b{display:block;font-family:var(--serif);font-size:16px;font-weight:600}
 .lrow .tt span{font-size:12.5px;color:var(--sub)}
@@ -144,6 +127,13 @@ textarea.in{resize:vertical;line-height:1.6}
 @keyframes pop{from{transform:scale(.94);opacity:0}to{transform:none;opacity:1}}
 .dmark{font-size:11px;color:var(--faint);margin:4px 0 14px;line-height:1.6}
 .empty{text-align:center;color:var(--sub);font-size:13.5px;padding:34px 12px}
+.hero .hb{display:block;width:100%;margin-top:12px}
+.hero.born .big{margin:2px 0 4px}
+.hero .bnm{font-family:var(--serif);font-size:30px;color:var(--acc-ink);line-height:1.2}
+.hero .ag{font-family:var(--serif);font-size:16px}
+.hero .ag b{font-size:34px;font-weight:500;color:var(--acc-ink);margin:0 3px}
+.hero .hbs{display:flex;gap:8px;margin-top:12px}
+.hero .hbs .btn{flex:1}
 .hero.empty{text-align:left;color:var(--ink);padding:20px 18px}
 .hero .in{background:rgba(255,253,250,.96)}
 
@@ -495,37 +485,36 @@ function wishStat(){const t=S.wishes.length,d=S.wishes.filter(w=>w.done).length;
 function monthMoods(Y,M){const out=[];const dim=new Date(Y,M+1,0).getDate();for(let d=1;d<=dim;d++){out.push(S.moods[`${Y}-${pad(M+1)}-${pad(d)}`]||0)}return out}
 
 /* ===== views ===== */
-function head(t,s){const nm=(ROOT.list.length>1&&t!=='ママノート')?`<span class="pn">${esc(curP().name)}</span>`:'';return `<header class="ph"><h1${t==='ママノート'?' class="logo"':''}>${t==='ママノート'?'<img src="img/title.webp" alt="ママノート：妊娠中の記録と準備を、ひとつに。" width="1040" height="390">':t}</h1>${(s||nm)?`<p>${s||''}${nm}</p>`:''}</header>`}
+function head(t,s){const nm=(ROOT.list.length>1&&t!=='ママノート')?`<span class="pn">${esc(curP().name)}</span>`:'';return `<header class="ph"><h1>${t}</h1>${(s||nm)?`<p>${s||''}${nm}</p>`:''}</header>`}
 const pregChip=()=>`<button class="preg-chip" data-act="pregSheet" aria-label="妊娠の切り替え">${esc(curP().name)}${ROOT.list.length>1?`<small>全${ROOT.list.length}件</small>`:''}${ic('chev')}</button>`;
 function subHead(t,s){return `<button class="back" data-act="go" data-v="more">${ic('back')}もっと</button>${head(t,s)}`}
 
-function a2hs(){
-  const standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone;
-  if (standalone) return '';
-  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
-  return `<p class="a2hs">📲 ホーム画面に追加してお使いください<small>${ios ? '下の共有ボタン（□に↑）→「ホーム画面に追加」' : 'ブラウザのメニュー →「ホーム画面に追加」'}</small></p>`;
-}
 function vHome(){
   const t=todayS();let hero;
-  if(!S.due){
+  const bornBtn=`<button class="btn cream sm hb" data-act="newBirth">赤ちゃんが産まれた！</button>`;
+  if(S.baby){
+    const b=S.baby,ag=Math.max(0,dn(t)-dn(b.date));
+    const age=ag===0?'今日、誕生しました':`<span class="ag">生後<b>${ag}</b>日</span>`;
+    hero=`<div class="card hero born"><div class="hl">ご出産おめでとうございます！</div><div class="big">${b.name?`<span class="bnm">${esc(b.name)}</span>`:''}</div><div class="hs">${age}</div><div class="hm"><span>誕生日 ${jd(b.date)}</span>${ag>=7?`<span>${Math.floor(ag/7)}週${ag%7}日</span>`:''}</div><div class="hbs"><button class="btn cream sm" data-act="celebrate">お祝いメッセージ</button><button class="btn ghost sm" data-act="editBirth">記録を編集</button></div></div>`;
+  }else if(!S.due){
     hero=`<div class="card hero empty"><h2>出産予定日を入力</h2><p>入力すると、妊娠週数とカウントダウンが表示されます。</p><form data-form="due" class="row"><input class="in" type="date" name="due" required aria-label="出産予定日"><button class="btn cream sm">設定</button></form></div>`;
   }else{
     const r=rawDays(t),left=dn(S.due)-dn(t);
     if(r<0){
-      hero=`<div class="card hero"><div class="hl">出産予定日まで</div><div class="big"><b>${left}</b><span>日</span></div><div class="hm"><span>予定日 ${jd(S.due)}</span></div><button class="lnk" data-act="editDue">予定日を変更</button></div>`;
+      hero=`<div class="card hero"><div class="hl">出産予定日まで</div><div class="big"><b>${left}</b><span>日</span></div><div class="hm"><span>予定日 ${jd(S.due)}</span></div><button class="lnk" data-act="editDue">予定日を変更</button>${bornBtn}</div>`;
     }else{
       const w=Math.floor(r/7),d=r%7,pct=clamp(Math.round(r/280*100),0,100);
       const tri=w<16?'妊娠初期':w<28?'妊娠中期':'妊娠後期';
       hero=`<div class="card hero"><div class="hl">妊娠</div><div class="big"><b>${w}</b><span>週</span><b>${d}</b><span>日</span></div>
       <div class="hs">${left>=0?`出産予定日まであと<b>${left}</b>日`:`予定日から<b>${-left}</b>日経過`}</div>
-      ${pb(pct)}<div class="hm"><span>予定日 ${jd(S.due)}</span><span>${tri}</span></div><button class="lnk" data-act="editDue">予定日を変更</button></div>`;
+      ${pb(pct)}<div class="hm"><span>予定日 ${jd(S.due)}</span><span>${tri}</span></div><button class="lnk" data-act="editDue">予定日を変更</button>${bornBtn}</div>`;
     }
   }
   const ps=prepStat(),ws=wishStat();
   const now=new Date();const mv=monthMoods(now.getFullYear(),now.getMonth()).filter(Boolean);
   const avg=mv.length?mv.reduce((a,b)=>a+b,0)/mv.length:0;
   const last=[...S.checkups].sort((a,b)=>b.date.localeCompare(a.date))[0];
-  return head('ママノート',jd(t))+a2hs()+pregChip()+hero+`
+  return head('ママノート',jd(t))+pregChip()+hero+`
   <div class="grid2">
    <button class="tile-s" data-act="go" data-v="prep"><span class="t">出産準備</span><span class="v">${ps.p}<small>%</small></span>${pb(ps.p)}<span class="n">${ps.d} / ${ps.t} 完了</span></button>
    <button class="tile-s" data-act="go" data-v="wish"><span class="t">やりたいこと</span><span class="v">${ws.p}<small>%</small></span>${pb(ws.p,'br')}<span class="n">${ws.d} / ${ws.t} 達成</span></button>
@@ -794,10 +783,7 @@ function vMore(){
   `<button class="lrow" data-act="go" data-v="echo"><span class="ic c">${ic('img')}</span><span class="tt"><b>エコーアルバム</b><span>${S.echoes.length}枚の写真</span></span>${ic('chev')}</button>
    <button class="lrow" data-act="go" data-v="proc"><span class="ic">${ic('check')}</span><span class="tt"><b>出産後の手続き</b><span>${procStat().d} / ${procStat().t} 完了</span></span>${ic('chev')}</button>
    <button class="lrow" data-act="go" data-v="wish"><span class="ic">${ic('star')}</span><span class="tt"><b>やりたいことリスト</b><span>${wishStat().d} / ${wishStat().t} 達成</span></span>${ic('chev')}</button>
-   <button class="lrow" data-act="go" data-v="data"><span class="ic b">${ic('save')}</span><span class="tt"><b>設定とバックアップ</b><span>予定日・書き出し・読み込み</span></span>${ic('chev')}</button>
-   <div class="sis-h">姉妹サイト</div>
-   <a class="sis" href="https://sunnyleaf62-oss.github.io/omutsu-tanka/" target="_blank" rel="noopener"><img src="img/omutsu-banner.webp" alt="おむつ単価くらべ：送料込みの1枚あたりで毎日比較" width="1200" height="450" loading="lazy"></a>
-   <a class="sis" href="https://sunnyleaf62-oss.github.io/milk-tanka/" target="_blank" rel="noopener"><img src="img/milk-banner.webp" alt="ミルク単価くらべ：送料込みの100mlあたりで毎日比較" width="1200" height="450" loading="lazy"></a>`;
+   <button class="lrow" data-act="go" data-v="data"><span class="ic b">${ic('save')}</span><span class="tt"><b>設定とバックアップ</b><span>予定日・書き出し・読み込み</span></span>${ic('chev')}</button>`;
 }
 function vData(){
   const kb=Math.round(new Blob([JSON.stringify(ROOT)]).size/1024);
