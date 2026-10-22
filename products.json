@@ -307,7 +307,8 @@
         "ratingFrom": "楽天",
         "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/53aefbb3.de8a4171.53aefbb9.3280b782/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpigeon-shop%2F1038571%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
         "img": "https://hbb.afl.rakuten.co.jp/hgb/53aefbb3.de8a4171.53aefbb9.3280b782/?me_id=1374439&item_id=10002195&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fpigeon-shop%2Fcabinet%2Fthumb%2F11827558%2F1038571_th.jpg%3F_ex%3D128x128&s=128x128&t=pict",
-        "amazon": "https://link.amazon/B08bLd2nR"
+        "amazon": "https://link.amazon/B08bLd2nR",
+        "comment": "妊娠中から産後まで使えます"
       }
     ],
     "哺乳ビン洗剤": [
@@ -352,6 +353,17 @@
         "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/56fe1b0e.ae9b2c7d.56fe1b15.7b9e9d9b/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnaturavie%2F4530025008010%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
         "img": "https://hbb.afl.rakuten.co.jp/hgb/56fe1b0e.ae9b2c7d.56fe1b15.7b9e9d9b/?me_id=1255803&item_id=10000173&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fnaturavie%2Fcabinet%2F12615797%2F13475514%2F13476257%2Frk261.jpg%3F_ex%3D128x128&s=128x128&t=pict",
         "amazon": "https://link.amazon/B0jhIt1pL"
+      }
+    ],
+    "おくるみ（退院用）": [
+      {
+        "name": "エイデンアンドアネイ公式 オーガニックスワドル",
+        "rating": 4.64,
+        "count": 28,
+        "ratingFrom": "楽天",
+        "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/549840b9.0bad800f.549840ba.9ad100ca/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fadenandanais%2Faswo20006%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
+        "img": "https://hbb.afl.rakuten.co.jp/hgb/549840b9.0bad800f.549840ba.9ad100ca/?me_id=1380927&item_id=10001031&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fadenandanais%2Fcabinet%2Fbtq02-swaddle2p%2Fswaddle2p_o_top.jpg%3F_ex%3D128x128&s=128x128&t=pict",
+        "amazon": "https://link.amazon/B0aaNCVsN"
       }
     ]
   }
