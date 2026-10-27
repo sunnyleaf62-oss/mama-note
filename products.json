@@ -1,5 +1,5 @@
 {
-  "updated": "2026年10月",
+  "updated": "2026年10月24日",
   "_readme": "items の中に、出産準備リストの項目名をキーにして商品を追加します（項目名は同じ文字で）。rakuten=楽天のリンク、amazon=Amazonのリンク（どちらか片方だけでもOK）、img=楽天の画像リンクの画像アドレス（小さな商品画像になります）。使えるリンクは https から始まる rakuten.co.jp / r10.to / amazon.co.jp / amzn.to / amzn.asia / a.co / link.amazon のものです。リンクのない商品は表示されません。1項目に最大3つまで。rating=星の数、count=レビュー件数、ratingFrom=評価の出どころ（例：楽天）、comment=ひとこと、either=true を付けると「どちらか1つでOK」と表示されます。updated に評価を確認した時期（例：2026年10月）を入れると、ページに表示されます。",
   "_example": {
     "チャイルドシート": [
@@ -17,7 +17,7 @@
   "items": {
     "延長コード": [
       {
-        "name": "ELECOM マグネット式延長コード",
+        "name": "ELECOM 電源タップ マグネット 10個口 ECT-15",
         "rating": 4.89,
         "count": 27,
         "ratingFrom": "楽天",
@@ -118,7 +118,7 @@
       {
         "name": "ROTOTObebe ロトトクッション 吐き戻し防止",
         "rating": 4.5,
-        "count": 791,
+        "count": 795,
         "ratingFrom": "楽天",
         "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/54702f72.db8b4023.54702f76.c6cb83cd/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsoyott-camp%2Frtt-quilt%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
         "img": "https://hbb.afl.rakuten.co.jp/hgb/54702f72.db8b4023.54702f76.c6cb83cd/?me_id=1421548&item_id=10000040&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fsoyott-camp%2Fcabinet%2F10119150%2F10119215%2F12652353%2Frtt-quilt_2h5.jpg%3F_ex%3D128x128&s=128x128&t=pict",
@@ -400,7 +400,7 @@
       {
         "name": "Pearls 授乳口付き マキシワンピース",
         "rating": 4.58,
-        "count": 890,
+        "count": 860,
         "ratingFrom": "楽天",
         "rakuten": "https://hb.afl.rakuten.co.jp/hgc/14e4414a.24ecf1e4.14e4414b.56d12a00/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpearls-ar%2F21a-jop202b%2F&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fpearls-ar%2F21a-jop202b%2F",
         "img": "https://thumbnail.image.rakuten.co.jp/@0_mall/pearls-ar/cabinet/01140186/04717908/10842768/imgrc0114124113.jpg?_ex=128x128"
