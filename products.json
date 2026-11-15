@@ -1,5 +1,5 @@
 {
-  "updated": "2026年10月30日",
+  "updated": "2026年11月14日",
   "_readme": "items の中に、出産準備リストの項目名をキーにして商品を追加します（項目名は同じ文字で）。rakuten=楽天のリンク、amazon=Amazonのリンク（どちらか片方だけでもOK）、img=楽天の画像リンクの画像アドレス（小さな商品画像になります）。使えるリンクは https から始まる rakuten.co.jp / r10.to / amazon.co.jp / amzn.to / amzn.asia / a.co / link.amazon のものです。リンクのない商品は表示されません。1項目に最大3つまで。rating=星の数、count=レビュー件数、ratingFrom=評価の出どころ（例：楽天）、comment=ひとこと、either=true を付けると「どちらか1つでOK」と表示されます。updated に評価を確認した時期（例：2026年10月）を入れると、ページに表示されます。",
   "_example": {
     "チャイルドシート": [
@@ -18,8 +18,8 @@
     "延長コード": [
       {
         "name": "ELECOM 電源タップ マグネット 10個口 ECT-15",
-        "rating": 4.89,
-        "count": 27,
+        "rating": 4.77,
+        "count": 30,
         "ratingFrom": "楽天",
         "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/5829f6a6.2ffa9faf.5829f6a7.628bbb66/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftescom-japan%2Fect-06%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
         "img": "https://hbb.afl.rakuten.co.jp/hgb/5829f6a6.2ffa9faf.5829f6a7.628bbb66/?me_id=1368876&item_id=10000204&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ftescom-japan%2Fcabinet%2Felecom%2Ftap%2F10676756%2Fimgrc0118570248.jpg%3F_ex%3D128x128&s=128x128&t=pict",
@@ -29,8 +29,8 @@
     "ストロー付きキャップ": [
       {
         "name": "EDISONmama ペットボトルストロー",
-        "rating": 4.47,
-        "count": 221,
+        "rating": 4.48,
+        "count": 242,
         "ratingFrom": "楽天",
         "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/5806748d.45eead38.5806748e.5d3422bc/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmylittlebaby%2Fkj500348%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
         "img": "https://hbb.afl.rakuten.co.jp/hgb/5806748d.45eead38.5806748e.5d3422bc/?me_id=1423566&item_id=10000455&pc=https%3A%2F%2Fimage.rakuten.co.jp%2Fmylittlebaby%2Fcabinet%2Fitem%2Fkj500348%2Fkj500348-14.jpg%3F_ex%3D128x128&s=128x128&t=pict",
@@ -62,8 +62,8 @@
     "哺乳ビン": [
       {
         "name": "Pigeon 母乳実感 哺乳びん Sheer",
-        "rating": 4.81,
-        "count": 223,
+        "rating": 4.8,
+        "count": 241,
         "ratingFrom": "楽天",
         "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/53aefbb3.de8a4171.53aefbb9.3280b782/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpigeon-shop%2F1046013%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
         "img": "https://hbb.afl.rakuten.co.jp/hgb/53aefbb3.de8a4171.53aefbb9.3280b782/?me_id=1374439&item_id=10002429&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fpigeon-shop%2Fcabinet%2Fthumb%2Fthumb4%2F1046013_260224.jpg%3F_ex%3D128x128&s=128x128&t=pict",
@@ -74,7 +74,7 @@
       {
         "name": "Pigeon スチーム除菌・乾燥器",
         "rating": 4.7,
-        "count": 871,
+        "count": 889,
         "ratingFrom": "楽天",
         "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/53aefbb3.de8a4171.53aefbb9.3280b782/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpigeon-shop%2F1030195%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
         "img": "https://hbb.afl.rakuten.co.jp/hgb/53aefbb3.de8a4171.53aefbb9.3280b782/?me_id=1374439&item_id=10002003&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fpigeon-shop%2Fcabinet%2Fthumb%2Fthumb%2F1030195.jpg%3F_ex%3D128x128&s=128x128&t=pict",
@@ -128,8 +128,8 @@
     "ベビーラック＆チェア": [
       {
         "name": "combi  ネムリラ オート",
-        "rating": 4.63,
-        "count": 121,
+        "rating": 4.62,
+        "count": 123,
         "ratingFrom": "楽天",
         "rakuten": "https://hb.afl.rakuten.co.jp/ichiba/53ccae48.f56dfb30.53ccae51.1b4add9c/_RTLink148506?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcombi%2F4972990164788%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
         "img": "https://hbb.afl.rakuten.co.jp/hgb/53ccae48.f56dfb30.53ccae51.1b4add9c/?me_id=1418189&item_id=10000005&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fcombi%2Fcabinet%2Fthum%2Fshisaku%2F4972990164788_p10.jpg%3F_ex%3D128x128&s=128x128&t=pict",
